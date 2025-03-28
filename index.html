@@ -90,176 +90,97 @@
         ]
     }
     </script>
+   <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS (CDN for quick styling) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Animation Library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
         body {
-            font-family: 'Poppins', sans-serif;
-            background: linear-gradient(135deg, #e0e7ff, #f4f4f4);
-            color: #333;
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #f0f4ff, #e6e9f0);
             line-height: 1.6;
-            overflow-x: hidden;
         }
-        .container {
-            max-width: 1000px;
-            margin: 40px auto;
-            padding: 40px;
-            background: #fff;
-            border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            position: relative;
-            overflow: hidden;
-        }
-        .container::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 5px;
-            background: linear-gradient(90deg, #3498db, #8e44ad);
-        }
-        h1 {
-            font-size: 2.8em;
-            color: #2c3e50;
-            margin-bottom: 10px;
-            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
-            animation: fadeIn 1s ease-in-out;
-        }
-        .subtitle {
-            font-size: 1.3em;
-            color: #7f8c8d;
-            margin-bottom: 30px;
-            font-weight: 300;
-            animation: fadeIn 1.2s ease-in-out;
-        }
-        h2 {
-            font-size: 1.8em;
-            color: #34495e;
-            margin: 40px 0 20px;
-            position: relative;
-            display: inline-block;
-        }
-        h2::after {
-            content: '';
-            display: block;
-            width: 50%;
-            height: 3px;
-            background: linear-gradient(90deg, #3498db, #8e44ad);
-            margin: 10px auto 0;
-        }
-        p {
-            font-size: 1.2em;
-            line-height: 1.8;
-            margin: 15px 0;
-            color: #555;
-            animation: fadeIn 1.4s ease-in-out;
-        }
-        .social-links {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 15px;
-            margin-top: 30px;
-        }
-        .social-links a {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            padding: 12px 25px;
+        .gradient-text {
             background: linear-gradient(45deg, #3498db, #8e44ad);
-            color: #fff;
-            text-decoration: none;
-            border-radius: 50px;
-            font-weight: 600;
-            font-size: 1em;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .card {
             transition: all 0.3s ease;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-            animation: fadeIn 1.6s ease-in-out;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
         }
-        .social-links a:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-            background: linear-gradient(45deg, #8e44ad, #3498db);
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
         }
-        .social-links a::before {
-            content: '🌐';
-            font-size: 1.2em;
+        .social-hover {
+            transition: all 0.3s ease;
         }
-        @keyframes fadeIn {
-            0% { opacity: 0; transform: translateY(20px); }
-            100% { opacity: 1; transform: translateY(0); }
-        }
-        @media (max-width: 768px) {
-            .container {
-                margin: 20px;
-                padding: 25px;
-            }
-            h1 {
-                font-size: 2.2em;
-            }
-            .subtitle {
-                font-size: 1.1em;
-            }
-            h2 {
-                font-size: 1.5em;
-            }
-            p {
-                font-size: 1em;
-            }
-            .social-links a {
-                padding: 10px 20px;
-                font-size: 0.9em;
-            }
-        }
-        @media (max-width: 480px) {
-            .container {
-                margin: 15px;
-                padding: 20px;
-            }
-            h1 {
-                font-size: 1.8em;
-            }
-            .subtitle {
-                font-size: 0.9em;
-            }
-            h2 {
-                font-size: 1.3em;
-            }
-            p {
-                font-size: 0.9em;
-            }
-            .social-links {
-                gap: 10px;
-            }
-            .social-links a {
-                padding: 8px 15px;
-                font-size: 0.8em;
-            }
+        .social-hover:hover {
+            transform: scale(1.05);
+            filter: brightness(110%);
         }
     </style>
 </head>
-<body>
-    <div class="container">
-        <h1>Hurriyah Mumtahanah (Sri Tanti)</h1>
-        <p class="subtitle">Ustazah | Guru Tahsin Tadabbur | Owner Bimbel Privat Bekasi | Penjual Logam Mulia (LM)</p>
-        <h2>Tentang Saya</h2>
-        <p>
-            Saya adalah seorang <strong>ustazah</strong> dan <strong>guru tahsin tadabbur</strong> di Bekasi, 
-            berdedikasi untuk membantu umat memahami Al-Qur'an dengan lebih baik. 
-            Saya juga <strong>owner Bimbel Privat Bu Tanti</strong> di Bekasi, 
-            menyediakan bimbingan belajar yang efektif untuk siswa. 
-            Selain itu, saya <strong>menjual logam mulia (LM)</strong> untuk investasi emas yang aman dan terpercaya. 
-            Hubungi saya untuk kelas tahsin, bimbel privat, atau investasi logam mulia di Bekasi.
-        </p>
-        <h2>Hubungi Saya</h2>
-        <div class="social-links">
-            <a href="https://www.instagram.com/hurriyahmumtahanah.tanti" target="_blank">Instagram</a>
-            <a href="https://www.youtube.com/@hurriyahmumtahanah.sritanti" target="_blank">YouTube</a>
+<body class="bg-gray-50">
+    <div class="container mx-auto px-4 py-16 max-w-4xl">
+        <div class="bg-white rounded-2xl shadow-2xl p-8 animate__animated animate__fadeIn">
+            <div class="text-center mb-12">
+                <h1 class="text-4xl md:text-5xl font-bold gradient-text mb-4 animate__animated animate__slideInDown">
+                    Hurriyah Mumtahanah
+                </h1>
+                <p class="text-xl text-gray-600 animate__animated animate__slideInUp">
+                    Ustazah | Guru Tahsin | Pemilik Bimbel | Konsultan Investasi
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="card bg-blue-50 p-6 rounded-xl hover:bg-blue-100 animate__animated animate__fadeInLeft">
+                    <h2 class="text-2xl font-semibold text-blue-800 mb-4">Pendidikan & Dakwah</h2>
+                    <p class="text-gray-700">
+                        Ahli dalam tahsin Al-Qur'an, membimbing umat memahami kitab suci dengan metode tadabbur yang mendalam dan menginspirasi.
+                    </p>
+                </div>
+
+                <div class="card bg-purple-50 p-6 rounded-xl hover:bg-purple-100 animate__animated animate__fadeInRight">
+                    <h2 class="text-2xl font-semibold text-purple-800 mb-4">Bimbingan Belajar</h2>
+                    <p class="text-gray-700">
+                        Memberikan bimbingan belajar privat berkualitas di Bekasi, dengan pendekatan personal dan metode pembelajaran efektif.
+                    </p>
+                </div>
+            </div>
+
+            <div class="mt-12 text-center">
+                <h2 class="text-3xl font-bold mb-6 gradient-text">Layanan Profesional</h2>
+                <div class="flex justify-center space-x-4">
+                    <a href="https://www.instagram.com/hurriyahmumtahanah.tanti" 
+                       target="_blank" 
+                       class="bg-pink-500 text-white px-6 py-3 rounded-full social-hover inline-flex items-center gap-2 transform hover:scale-105 animate__animated animate__pulse animate__delay-2s">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.148 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.148-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162S8.597 18.163 12 18.163s6.162-2.759 6.162-6.162S15.403 5.838 12 5.838zm0 10.162c-2.209 0-4-1.79-4-4s1.791-4 4-4 4 1.79 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                        </svg>
+                        Instagram
+                    </a>
+                    <a href="https://www.youtube.com/@hurriyahmumtahanah.sritanti" 
+                       target="_blank" 
+                       class="bg-red-500 text-white px-6 py-3 rounded-full social-hover inline-flex items-center gap-2 transform hover:scale-105 animate__animated animate__pulse animate__delay-3s">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.246 11.626.245 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/>
+                        </svg>
+                        YouTube
+                    </a>
+                </div>
+            </div>
         </div>
     </div>
+
+    <footer class="text-center text-gray-500 py-6">
+        <p>&copy; 2024 Hurriyah Mumtahanah. All rights reserved.</p>
+    </footer>
 </body>
 </html>
